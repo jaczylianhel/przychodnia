@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+header {
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+main {
+    height: 100vh;
+    background-color: gray;
+    margin-top: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+#background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: 2s;
+}
+
+#logo {
+    width: 80vh;
+    margin-left: 30%;
+    margin-top: 10px;
+}
+
+header nav {
+    position: absolute;
+    right: 7%;
+    top: 4%;
+    font-size: 3.5rem;
+}
+
+header hgroup {
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    z-index: 1;
+    color: #FFF;
+    background-color: #FF9000;
+    padding: 5px 10px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-family: 'Droid Serif', serif;
+}
+
+header h3 {
+    font-size: 1.5rem;
+}
+
+#arrow {
+    width: 50px;
+    height: 50px;
+    border: 3px solid black;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0px -10px 0 black, 0 10px 0 black;
+    overflow: hidden;
+    transition: 1s ease;
+}
+
+.fa-angle-down {
+    animation: arrow 1.6s infinite linear;
+}
+
+#arrow:hover {
+    text-shadow: 0px -15px 0 white, 0 15px 0 white;
+    color: white;
+    border-color: white;
+    cursor: pointer;
+}
+#build {
+color: #fff;
+font-size: 100px;
+}
+@media (orientation: portrait) {
+    h3 span::after {
+        content: '\A';
+        white-space: pre;
+    }
+}
+
+@media (min-width: 1100px) {
+    header img {
+        width: 100%
+    }
+}
+
+
+
+@keyframes arrow {
+    0% {
+        transform: translateY(-80px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(80px);
+    }
+}
